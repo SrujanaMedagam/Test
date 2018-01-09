@@ -1,0 +1,37 @@
+#loginDiv
+{
+	margin:auto;
+	width:40%;
+	background-color: #f1ebeb;
+	
+}
+#logins
+{
+	margin:auto;
+	width:50%;
+}
+.formglyphicon {
+    position: relative;
+    top: 18px !important;
+    font-size: 20px;
+}
+@media screen and (width: 1366px) {
+
+#loginDiv
+{
+	margin:auto;
+	width:55%;
+	background-color: #f1ebeb;
+	
+}
+}
+@media (max-width:1024px) and (min-width:360px) {
+
+#loginDiv
+{
+	margin:auto;
+	width:98%;
+	background-color: #f1ebeb;
+	
+}
+}

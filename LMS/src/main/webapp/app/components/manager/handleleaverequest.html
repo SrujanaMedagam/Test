@@ -1,0 +1,42 @@
+<h1>Leave Requests</h1>
+<div id="leaveRequests" ng-controller="leaveRequests" class="form-group">
+<form>
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-addon"><i class="fa fa-search"></i></div>
+
+       <input id="searchBox" ng-click="resetPage()" type="text" class="form-control" placeholder="Search Record By ID" ng-model="search.eid">
+        <input id="searchBox1" ng-click="resetPage()" type="text" class="form-control" placeholder="Search Record By Reason" ng-model="search.reason">
+
+      </div>      
+    </div>
+  </form>
+<table   id="leaveRequestsTable" class="table"  width="100%" cellpadding="0" cellspacing="0" border="0" >
+ <thead>
+      <tr>
+        <th>Employee ID</th>
+        <th>From Date</th>
+        <th>To Date</th>
+        <th>No Of Days</th>
+        <th>Reason</th>
+        <th>Approve/Reject</th>
+       
+      </tr>
+    </thead>
+    <tbody>
+  <tr ng-repeat="emp in filtered = leaveRequest | filter:search | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit">
+    <td onmouseover="displayEmployeeDataInToolTip(this)" onmouseout="removeEmployeeDataInToolTip(this)"   >{{ emp.eid}}</td>
+    
+    <td >{{ emp.fromDate }}</td>
+    <td>{{ emp.toDate }}</td>
+    <td>{{ emp.noOfDays }}</td>
+    <td>{{ emp.reason }}</td>   
+    <td id="sno_{{emp.sno}}"><button id="{{emp.sno}}" onclick="acceptLeaveRequest(this)" class="btn btn-link">Approve</button><button id="{{emp.sno}}" style="margin-left:2px;" onclick="rejectLeaveRequest(this)" class="btn btn-link">Reject</button></td>
+   
+  </tr>
+  <tbody>
+</table>
+<pagination page="currentPage" max-size="noOfPages" total-items="totalItems" items-per-page="entryLimit"></pagination>
+
+
+</div>

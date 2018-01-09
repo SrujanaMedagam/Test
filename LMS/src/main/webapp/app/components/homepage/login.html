@@ -1,0 +1,62 @@
+<!-- <h2 style="font-family:Georgia;text-align: center;">PLEASE LOGIN</h2>
+<div ng-controller="loginController" class="center">
+
+<form action="" id="login" method="post" class="form-group">
+<table>
+<tr>
+<td><label class="labels" for="comment" >Role:</label></td>
+<td><select id="selectROle" class="form-control" ng-model="role">
+<option value="">Please Select:</option> 
+	<option value="Admin">Admin</option> 
+  <option value="Manager">Manager</option>
+   <option value="Employee">Employee</option>
+</select></td>
+</tr>
+<tr>
+<td><label class="labels" style="margin-top:30px;" for="comment" >Username:</label></td>
+<td><input style="margin-top:30px;" type="text" class="form-control" id="uname" name="uname" ng-model="uname" /></td>
+</tr>
+<trw>
+<td><label class="labels" style="margin-top:30px;" for="comment">Password:</label></td>
+<td><input style="margin-top:30px;" type="password" class="form-control"  id="password" name="password" ng-model="password" /></td>
+</tr>
+</form>
+<br>
+<tr>
+<td><button style="margin-top:20px;" class="btn btn-success btn-lg active" id="submitBtn" ng-click="submit()">Login</button></td>
+</tr>
+</table>
+
+</div> -->
+<h2 style="font-family:Georgia;text-align: center; margin-top: 20%;"><img alt="logo" src="/app/assets/images/valuelabs-logo.gif"></h2>
+<div  id="loginDiv" ng-controller="loginController" >
+<form action="" id="logins" method="post" >
+     <table>
+     <tr>
+     <td style="font-family:Georgia; font-size: 20px;">Login</td>
+     </tr>
+<tr>
+<td><span class="glyphicon glyphicon-user formglyphicon" style="top:5px !important;"></span></td>
+<td><select id="selectROle" class="form-control" ng-model="role">
+<option value="">Please Select Role:</option> 
+	<option value="Admin">Admin</option> 
+  <option value="Manager">Manager</option>
+   <option value="Employee">Employee</option>
+</select></td>
+</tr>
+<tr>
+<td><span class="glyphicon glyphicon-user formglyphicon" ></span></td>
+<td><input style="margin-top:30px;" placeholder="username" type="text" class="form-control" id="uname" name="uname" ng-model="uname" /></td>
+</tr>
+<tr>
+<td><span class="glyphicon glyphicon-lock formglyphicon"></span></td>
+<td><input style="margin-top:30px;" placeholder="password" type="password" class="form-control"  id="password" name="password" ng-model="password" /></td>
+</tr>
+</form>
+<br>
+<tr>
+<td colspan="2"><button style="margin-top:20px;width:100%;background-color:#0981b3;" class="btn btn-success btn-lg active" id="submitBtn" ng-click="login()">Login</button></td>
+</tr>
+</table>
+
+</div>

@@ -1,0 +1,17 @@
+<div ng-controller="employeeAppliedLeave">
+<h1>Applied Leaves</h1>
+<table id="leaveFormatTable">
+<tr>
+<td><label>From Date:</label></td>
+<td><input class="form-control" ng-model="frmdate" type="date" id="datepicker"></td>
+</tr>
+<tr>
+<td><label>To Date:</label></td>
+<td><input class="form-control" ng-model="todate" type="date" id="todate"></td>
+</tr>
+<tr>
+<td><button id="showAppliedleaves" class="btn btn-success" ng-click="getLeaveData()">Submit</button></td>
+</tr>
+</table>
+<div  style="display: none;" id="showLeaves"></div>
+</div>

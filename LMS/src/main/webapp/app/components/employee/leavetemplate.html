@@ -1,0 +1,76 @@
+<div ng-controller="employeeApplyLeave" ng-click="calculateNoOfDays()">
+ <form id="leaveform" name="employeeLeaveForm" novalidate="novalidate">
+<table id="leaveFormatTable">
+
+<tr>
+<td><label>From Date:</label></td>
+<td><input class="form-control" name="frmdate" ng-model="frmdate" type="date" id="datepicker" ng-required="true">
+<span class="validation" ng-show=" employeeLeaveForm.frmdate.$error.required && !employeeLeaveForm.frmdate.$pristine ">This field is required</span></td>
+</tr>
+<tr>
+<td><label>To Date:</label></td>
+<td><input class="form-control" name="todate" ng-model="todate" type="date" id="todate" ng-required="true">
+<span class="validation" ng-show="employeeLeaveForm.todate.$error.required && !employeeLeaveForm.todate.$pristine">This field is required</span>
+</td>
+</tr>
+<tr>
+<td><label>Balance Leaves:</label></td>
+<td><input class="form-control" type="text" id="balanceLeaves" readonly="readonly"></td>
+</tr>
+<tr>
+<td><label>From:</label></td>
+<td><input class="radio-inline" name="fromOptRadio"   type="radio" id="ffhalf" ng-required="true" value="0" /><label>First Half</label>
+	 <input class="radio-inline" name="fromOptRadio" type="radio" id="fshalf" value="1"><label>Second Half</label>
+	 <span class="validation" ng-show="employeeLeaveForm.fromOptRadio.$touched"></span>
+	 </td>
+</tr>
+<tr>
+<td><label>To:</label></td>
+<td><input class="radio-inline" name="toOptRadio"  type="radio" id="tfhalf"  ng-required="true" value="0"/><label>First Half</label>
+<input class="radio-inline" name="toOptRadio" type="radio" id="tshalf" value="1" /><label>Second Half</label>
+<span class="validation" ng-show="employeeLeaveForm.toOptRadio.$valid"></span>
+</td>
+</tr>
+<tr>
+<td><label>No of Days:</label></td>
+<td><input class="form-control" type="text" id="noOfDays" readonly="readonly" ng-model="noOfDays"></td>
+</tr>
+<tr>
+<td><label>Reporting To:</label></td>
+<td><label id="reportingManagerLabel"></label></td>
+</tr>
+<tr>
+<td><label>Reason:</label></td>
+<td><textarea  class="form-control" rows="8" cols="8" id="reason" ng-model="reason"></textarea></td>
+</tr>
+<tr><td><input type="hidden" name="hdnweekoffdays1" id="hdnweekoffdays1" value="1" /></td>
+<td><input type="hidden" name="hdnweekoffsays2" id="hdnweekoffsays2" value="7" /></td>
+<td><input type="hidden" name="hdnHolidayDates" id="hdnHolidayDates" value="12-25-2017,10-19-2017,10-2-2017," /></td>
+
+
+</tr>
+
+
+</table>
+<div style="margin-left:112px; margin-top:20px;">
+<table>
+<tr >
+<td ><button  type="button" ng-click="applyLeave()" ng-disabled="employeeLeaveForm.$invalid" class="btn btn-success"  >Submit</button> <input id="reset" type="reset" class="btn btn-success" /></td>
+</tr>
+</table>
+
+
+</div>
+
+</form>
+</div>
+
+
+
+
+
+
+
+
+
+

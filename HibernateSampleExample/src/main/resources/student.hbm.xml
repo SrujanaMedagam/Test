@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.valuelabs.relationship.Student" table="studentMany">
+
+		<id name="sId" column="sId" />
+
+		<property name="sName" column="sName"  />
+		<set name="courses" table="Student_Course" cascade="all">
+			<key column="student_Id " />
+
+			<many-to-many class="com.valuelabs.relationship.Course" 
+				column="course_Id" />
+
+		</set>
+	</class>
+
+</hibernate-mapping> 

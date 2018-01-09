@@ -1,0 +1,57 @@
+<div ng-controller="saveEmployeeDetails" >
+ <form id="leaveform" name="employeeDetailsForm" novalidate="novalidate">
+<table id="leaveFormatTable">
+
+<tr>
+<td><label>First Name:</label></td>
+<td><input class="form-control" name="fname" ng-model="fname" type="text" id="firstName" ng-required="true">
+<span class="validation" ng-show="employeeDetailsForm.fname.$error.required && !employeeDetailsForm.fname.$pristine">This field is required</span></td>
+</tr>
+<tr>
+<td><label>Last Name:</label></td>
+<td><input class="form-control" name="lname" ng-model="lname" type="text" id="lastName" ng-required="true">
+<span class="validation" ng-show="employeeDetailsForm.lname.$error.required && !employeeDetailsForm.lname.$pristine ">This field is required</span></td>
+</tr>
+<tr>
+<td><label>Father's Name:</label></td>
+<td><input class="form-control" name="fatherName" ng-model="fatherName" type="text" id="fatherName" ng-required="true">
+<span class="validation" ng-show="employeeDetailsForm.fatherName.$error.required && !employeeDetailsForm.fatherName.$pristine ">This field is required</span></td>
+</tr>
+<tr>
+<td><label>mobile No:</label></td>
+<td><input class="form-control" name="mobNo" ng-model="mobNo" type="number" id="mobNo" ng-required="true">
+<span class="validation" ng-show="employeeDetailsForm.mobNo.$error.required && !employeeDetailsForm.mobNo.$pristine ">This field is required</span></td>
+</tr>
+<tr>
+<td><label>Alternate mobile No:</label></td>
+<td><input class="form-control" name="altMobNo" ng-model="altMobNo" type="number" id="altMobNo" ng-required="true">
+<span class="validation" ng-show="employeeDetailsForm.altMobNo.$error.required && !employeeDetailsForm.altMobNo.$pristine ">This field is required</span></td>
+</tr>
+<tr>
+<td><label>Address:</label></td>
+<td><textarea name="address" class="form-control" rows="8" cols="8" id="address" ng-model="address" ng-required="true"></textarea>
+<span class="validation" ng-show="employeeDetailsForm.address.$error.required && !employeeDetailsForm.address.$pristine ">This field is required</span></td>
+</tr>
+</table>
+<div style="margin-left:112px; margin-top:20px;">
+<table>
+<tr >
+<td ><button  type="button" ng-click="saveEmployeeDetails()" ng-disabled="employeeDetailsForm.$invalid" class="btn btn-success"  >Save</button> <input id="reset" type="reset" class="btn btn-success" /></td>
+</tr>
+</table>
+
+
+</div>
+
+</form>
+</div>
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,69 @@
+<!-- <div ng-controller="employeeApplyLeave" ng-click="calculateNoOfDays()">
+ <form id="leaveform" >
+<table id="leaveFormatTable"> -->
+<h2>Admin Login</h2>
+<h3>Admin Permission Form</h3>
+
+<form id="adminAccessPermissionForm">
+	<div ng-controller="adminAccessPermissionController">
+		<table id="adminAccessPermissionTable">
+			<tr>
+				<td align="left"><label>Role:</label></td>
+				<td><select id="selectRole" class="form-control"
+					ng-model="role">
+						<option value="">Please Select:</option>
+						<option value="admin">Admin</option>
+						<option value="manager">Manager</option>
+						<option value="employee">Employee</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td align="left"><label>Employee Name:</label></td>
+				<td><input class="form-control" ng-model="empName" type="text"
+					id="empName"></td>
+			</tr>
+			<tr>
+				<td align="left"><label>User Id / Employee Id:</label></td>
+				<td><input class="form-control" ng-model="empId" type="text"
+					id="empId"> <span id="checkEmpIderrorMessage"
+					style="color: red; display: none">Employee ID already exists</span>
+				</td>
+			</tr>
+			<tr>
+				<td align="left"><label>Password:</label></td>
+				<td><input class="form-control" ng-click="checkEmployeeId()"
+					ng-model="password" type="password" id="password"></td>
+			</tr>
+			<tr>
+				<td align="left"><label>Email : </label></td>
+				<td><input class="form-control" ng-model="email" type="text"
+					id="email"></td>
+			</tr>
+			<!-- <tr>
+				<td align="left"><label>Reporting Manager Id:</label></td>
+				<td><input class="form-control" ng-show="role=='employee'" ng-model="manager" type="text" id="manager"></td>
+				<td><input class="form-control" ng-show="role=='employee'"
+					autocomplete="false" ng-model="manager" type="text" id="manager"
+					list="managerIds"> <datalist id="managerIds">
+						<option value="Please Select">Please Select</option>
+					</datalist></td>
+			</tr> -->
+
+			<tr>
+				<td align="left"><label>Reporting Manager Id:</label></td>
+				<td><input class="form-control" autocomplete="false"
+					ng-model="manager" type="text" id="manager" list="managerIds">
+					<datalist id="managerIds">
+						<option value="Please Select">Please Select</option>
+					</datalist></td>
+			</tr>
+			<tr>
+				<td align="right"><br>
+					<button type="button" ng-click="adminAccessPermissionData()"
+						class="btn btn-success">Submit</button></td>
+				<td align="right"><br> <input id="reset" type="reset"
+					class="btn btn-success" /></td>
+			</tr>
+		</table>
+	</div>
+</form>

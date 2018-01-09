@@ -1,0 +1,42 @@
+<h1>Reporting Employees Details</h1>
+<div id="employeeDetails" ng-controller="showReportingEmployeesDetails" class="form-group">
+<form>
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-addon"><i class="fa fa-search"></i></div>
+
+        <input id="searchBox" ng-click="resetPage()" type="text" class="form-control" placeholder="Search Record By ID" ng-model="search.eid">
+        <input id="searchBox1" ng-click="resetPage()" type="text" class="form-control" placeholder="Search Record By Reason" ng-model="search.reason">
+        
+      </div>      
+    </div>
+  </form>
+<table id="reportingEmployeesDetailsTable" class="table"  width="100%" cellpadding="0" cellspacing="0" border="0">
+ <thead>
+      <tr>
+        <th>Employee ID</th>
+        <th>From Date</th>
+        <th>To Date</th>
+        <th>No Of Days</th>
+        <th>Reason</th>
+        <th>leaveStatus</th>
+       
+      </tr>
+    </thead>
+    <tbody>
+  <tr ng-repeat="emp in filtered = employeeDetails | filter:search | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit">
+    <td>{{ emp.eid}}</td>
+    <td>{{ emp.fromDate }}</td>
+    <td>{{ emp.toDate }}</td>
+    <td>{{ emp.noOfDays }}</td>
+    <td>{{ emp.reason }}</td>
+    <td ng-if="emp.leaveStatus == '1' " style="color:green; ">Approved</td>   
+     <td ng-if="emp.leaveStatus == '3' " style="color:red;">Rejected</td>  
+  </tr>
+  <tbody>
+</table>
+<pagination page="currentPage" max-size="noOfPages" total-items="totalItems" items-per-page="entryLimit"></pagination>
+
+       <button id="generateReportBtn" class="btn btn-primary btn-lg" ng-click="generateReport()" style="margin-left: 45%;">Generate Report</button>
+
+</div>
