@@ -13,6 +13,7 @@ public class TestDeserilized {
 		System.out.println("id:"+student.id);
 		System.out.println("name:"+student.name);
 		System.out.println("contact:"+student.contact);
+		System.out.println(student.address);
 		ois.close();
 		fis.close();
 		
