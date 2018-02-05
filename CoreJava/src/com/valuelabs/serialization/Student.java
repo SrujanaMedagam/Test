@@ -24,6 +24,8 @@ public class Student  implements Serializable{
 		
 		super();
 		System.out.println("Srujana");
+		System.out.println("Srujana");
+		
 		this.id = id;
 		this.name = name;
 		this.contact = contact;
