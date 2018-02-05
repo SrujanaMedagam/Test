@@ -21,7 +21,9 @@ public class Student  implements Serializable{
 	 Address address;
 	
 	public Student(int id, String name, String contact,Address address) {
+		
 		super();
+		System.out.println("Srujana");
 		this.id = id;
 		this.name = name;
 		this.contact = contact;
