@@ -8,7 +8,7 @@ public class TestSerialization {
 	public static void main(String args[]) throws IOException{
 		Address add=new Address("AP");
 		Student st=new Student(1, "Srujana", "Hyd",add);
-		FileOutputStream fos=new FileOutputStream("student.ser");
+		FileOutputStream fos=new FileOutputStream("d://student.ser");
 		ObjectOutputStream oos=new ObjectOutputStream(fos);
 		oos.writeObject(st);
 		System.out.println("Serilaized");

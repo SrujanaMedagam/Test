@@ -6,7 +6,7 @@ import java.io.ObjectInputStream;
 
 public class TestDeserilized {
 	public static void main(String args[]) throws IOException, ClassNotFoundException{
-		FileInputStream fis=new FileInputStream("student.ser");
+		FileInputStream fis=new FileInputStream("d://student.ser");
 		ObjectInputStream ois=new ObjectInputStream(fis);
 		Student student = (Student) ois.readObject();
 		System.out.println("desrerilized");

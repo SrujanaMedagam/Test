@@ -15,9 +15,9 @@ public class Student  implements Serializable{
 	/**
 	 * 
 	 */
-	int id;
+	static int id;
 	  String name;
-	static String contact;
+ String contact;
 	 Address address;
 	
 	public Student(int id, String name, String contact,Address address) {
@@ -29,6 +29,23 @@ public class Student  implements Serializable{
 		this.id = id;
 		this.name = name;
 		this.contact = contact;
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		this.address=address;
 	}
 	
