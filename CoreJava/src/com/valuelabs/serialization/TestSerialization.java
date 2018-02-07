@@ -14,6 +14,7 @@ public class TestSerialization {
 		System.out.println("Serilaized");
 		oos.close();
 		fos.close();
+		System.out.println("sruajan");
 		
 		
 		
