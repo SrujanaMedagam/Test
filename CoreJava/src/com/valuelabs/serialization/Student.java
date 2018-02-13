@@ -28,8 +28,10 @@ public class Student implements Serializable {
 	public Student(int id, String pwd, String name, String contact, Address address) {
 
 		super();
+
 		 this.id = id;
 		 this.pwd=pwd;
+
 		this.name = name;
 		this.contact = contact;
 
