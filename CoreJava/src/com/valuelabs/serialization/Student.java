@@ -18,7 +18,7 @@ public class Student implements Serializable {
 	/**
 	 * 
 	 */
-	transient static int id;
+	transient int id;
 	transient String pwd;
 	String name;
 	String contact;
@@ -44,13 +44,7 @@ public class Student implements Serializable {
 
 	}
 
-	public static int getId() {
-		return id;
-	}
-
-	public static void setId(int id) {
-		Student.id = id;
-	}
+	
 
 	public String getPwd() {
 		return pwd;
@@ -84,9 +78,6 @@ public class Student implements Serializable {
 		this.address = address;
 	}
 
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
 
 	private void readObject(ObjectInputStream ois) throws ClassNotFoundException, IOException {
 		ois.defaultReadObject();
