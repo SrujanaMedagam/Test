@@ -11,6 +11,7 @@ public class Employee implements Externalizable {
 	String address;
 	public Employee(){
 		System.out.println("default constructor");
+		System.out.println("default constructor");
 	}
 	Employee(int eid,String ename,String address){
 		this.eid=eid;
