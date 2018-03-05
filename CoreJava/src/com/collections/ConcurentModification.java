@@ -41,7 +41,7 @@ public class ConcurentModification {
 		System.out.println(myMap.containsKey(null));
 		System.out.println("HashMap before iterator: "+myMap);
 		Iterator<String> it1 = myMap.keySet().iterator();
-
+System.out.println("jkdsfjgk");
 		while(it1.hasNext()){
 			String key = it1.next();
 			if(key.equals("3")) myMap.put(key+"new", "new3");
