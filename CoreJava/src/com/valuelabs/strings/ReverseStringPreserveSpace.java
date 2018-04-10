@@ -1,4 +1,4 @@
-package com.valuelabs.array;
+package com.valuelabs.strings;
 
 public class ReverseStringPreserveSpace {
 

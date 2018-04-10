@@ -6,20 +6,23 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
+
 import com.valuelabs.service.LoginService;
 
-@Controller
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+@RestController
 @RequestMapping("/login")
 public class LoginController {
 	
 	@Autowired(required = true)
 	LoginService loginService;
 
-	@RequestMapping("/")
+	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String homepage() {
 		return "login";
 	}
-
 	@RequestMapping(value = "/userlogin", method = RequestMethod.GET)
 	public @ResponseBody String checkLoginCredentials(@RequestParam("username") String username,
 			@RequestParam("password") String password) {
@@ -31,7 +34,6 @@ public class LoginController {
 		}
 		return result;
 	}
-
 	@RequestMapping(value = "/checkAccountNumber", method = RequestMethod.GET)
 	public @ResponseBody String checkAccountNumber(@RequestParam("accountNumber") String accountNumber) {
 		String result;
@@ -42,7 +44,6 @@ public class LoginController {
 		}
 		return result;
 	}
-
 	@RequestMapping(value = "/checkUserID", method = RequestMethod.GET)
 	public @ResponseBody String checkUserID(@RequestParam("username") String username) {
 		String result;
@@ -53,15 +54,13 @@ public class LoginController {
 		}
 		return result;
 	}
-
 	@RequestMapping(value = "/accountNumber", method = RequestMethod.GET)
 	public @ResponseBody String getAccountNumber(@RequestParam("username") String username,
 			@RequestParam("password") String password) {
 		String accountNumber = loginService.getAccountNumber(username, password);
 		return accountNumber;
 	}
-
-	@RequestMapping("/newUserPermission")
+	@RequestMapping(value = "/newUserPermission" , method = RequestMethod.GET)
 	public @ResponseBody String newUserAccessPermission(@RequestParam("accountNumber") String accountNumber,
 			@RequestParam("accountName") String accountName, @RequestParam("username") String username,
 			@RequestParam("password") String password, @RequestParam("address") String address,
