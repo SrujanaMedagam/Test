@@ -3,6 +3,8 @@ package com.collections;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class ConcurentModification {
@@ -41,10 +43,18 @@ public class ConcurentModification {
 		System.out.println(myMap.containsKey(null));
 		System.out.println("HashMap before iterator: "+myMap);
 		Iterator<String> it1 = myMap.keySet().iterator();
-System.out.println("jkdsfjgk");
+	Set s =myMap.entrySet();
+		Iterator r =s.iterator();
+		while(r.hasNext()){
+			Map.Entry em = (Entry) r.next();
+			System.out.print(em.getKey()+" ");
+			System.out.println(em.getValue());
+			
+		}
+
 		while(it1.hasNext()){
 			String key = it1.next();
-			if(key.equals("3")) myMap.put(key+"new", "new3");
+			if(key.equals("4")) myMap.remove("4");
 		}
 		System.out.println("HashMap after iterator: "+myMap);
 	}

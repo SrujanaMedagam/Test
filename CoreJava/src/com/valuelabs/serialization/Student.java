@@ -1,5 +1,6 @@
 package com.valuelabs.serialization;
 
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
@@ -18,7 +19,7 @@ public class Student implements Serializable {
 	/**
 	 * 
 	 */
-	transient int id;
+	transient static int id;
 	transient String pwd;
 	String name;
 	String contact;
@@ -27,9 +28,8 @@ public class Student implements Serializable {
 	public Student(int id, String pwd, String name, String contact, Address address) {
 
 		super();
-		this.id = id;
-		this.pwd = pwd;
-
+		 this.id = id;
+		 this.pwd=pwd;
 		this.name = name;
 		this.contact = contact;
 
@@ -44,7 +44,13 @@ public class Student implements Serializable {
 
 	}
 
-	
+	public static int getId() {
+		return id;
+	}
+
+	public static void setId(int id) {
+		Student.id = id;
+	}
 
 	public String getPwd() {
 		return pwd;
@@ -78,6 +84,9 @@ public class Student implements Serializable {
 		this.address = address;
 	}
 
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
 
 	private void readObject(ObjectInputStream ois) throws ClassNotFoundException, IOException {
 		ois.defaultReadObject();

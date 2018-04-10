@@ -8,7 +8,7 @@ import java.io.ObjectOutputStream;
 
 public class ExtranalizationDemo {
 
-	public static void main(String[] args) throws IOException, ClassNotFoundException {
+	final  public static void main(String[] args) throws IOException, ClassNotFoundException {
 		
 		Employee e=new Employee(1485,"srujana","Hyd");
 		FileOutputStream fos=new FileOutputStream("d://student.ser");
