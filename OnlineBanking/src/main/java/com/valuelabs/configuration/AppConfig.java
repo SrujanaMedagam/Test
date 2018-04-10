@@ -1,4 +1,4 @@
-package com.valuelabs.configuration;
+/*package com.valuelabs.configuration;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
@@ -6,7 +6,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;  
 @Configuration 
-@ComponentScan("com.concretepage") 
+@ComponentScan("com.valuelabs") 
 @EnableWebMvc   
 //@PropertySource("classpath:documentation.properties")
 public class AppConfig extends WebMvcConfigurerAdapter {  
@@ -17,4 +17,4 @@ public class AppConfig extends WebMvcConfigurerAdapter {
         registry.addResourceHandler("/webjars/**")
                 .addResourceLocations("classpath:/META-INF/resources/webjars/");
     } 
-} 
+}*/ 
