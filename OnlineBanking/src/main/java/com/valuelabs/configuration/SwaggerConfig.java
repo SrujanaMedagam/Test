@@ -37,7 +37,7 @@ public class SwaggerConfig {
                                         "",
                                         new Contact("Srujana Medagam", "http://edwin.baculsoft.con", "srujana.medagam@valuelabs.com"),
                                         "Apache License",
-                                        "");
+                                        "", null);
         return apiInfo;
     }
 }

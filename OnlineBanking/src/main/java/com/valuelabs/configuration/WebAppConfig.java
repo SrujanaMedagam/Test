@@ -1,4 +1,4 @@
-/*package com.valuelabs.configuration;
+package com.valuelabs.configuration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -10,9 +10,9 @@ import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
-import springfox.documentation.swagger2.annotations.EnableSwagger2;*/
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
-/*@Configuration
+@Configuration
 @EnableWebMvc
 public class WebAppConfig extends WebMvcConfigurerAdapter {
 
@@ -21,4 +21,4 @@ public class WebAppConfig extends WebMvcConfigurerAdapter {
         registry.addResourceHandler("swagger-ui.html").addResourceLocations("classpath:/META-INF/resources/");
         registry.addResourceHandler("/webjars/**").addResourceLocations("classpath:/META-INF/resources/webjars/");
     }
-}*/
+}
